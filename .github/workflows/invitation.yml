@@ -1,0 +1,17 @@
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  automate_invite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invite on label
+        uses: vj-abigo/invite-on-label@v1.4
+        with:
+          organization: Hack-Haven
+          label: Invitation
+          repo-token: ${{GITHUB_TOKEN}}
+          comment: '<b><h1>Welcome to the community🎉</h1></b><br>Don''t forget to accept the invitation sent through mail.<br>'
+        env:
+          INVITE_TOKEN: ${{INVITE_TOKEN}}
