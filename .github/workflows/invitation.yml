@@ -9,7 +9,7 @@ jobs:
       - name: Invite on label
         uses: vj-abigo/invite-on-label@v1.4
         with:
-          organization: Hack-Haven
+          organization: Fork-N-Forge
           label: Invitation
           repo-token: ${{GITHUB_TOKEN}}
           comment: '<b><h1>Welcome to the community🎉</h1></b><br>Don''t forget to accept the invitation sent through mail.<br>'
